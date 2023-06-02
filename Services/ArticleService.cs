@@ -11,7 +11,7 @@ public static class ArticleService
     {
         Articles = new List<Article>
         {
-            new Article { Id = _nextId++, Title = "First Article", Content = "This is the content of my first article.", Author = "John Doe", UpdatedAt = "2023-06-01T06:08:44.546Z", CreatedAt = "2023-06-01T06:08:44.546Z"},
+            new Article { Id = _nextId++, Title = "First Article", Content = "This is the content of my first article.", Author = "John Doe", UpdatedAt = DateTime.Now, CreatedAt = DateTime.Now },
         };
     }
     
