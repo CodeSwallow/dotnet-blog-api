@@ -29,7 +29,7 @@ public class ArticleController : ControllerBase
     public IActionResult Create(Article article)
     {
         ArticleService.Add(article);
-        return new CreatedAtRouteResult("Get", new { id = article.Id }, article);
+        return CreatedAtAction(nameof(Get), new { id = article.Id }, article);
     }
     
     [HttpPut("{id}")]
