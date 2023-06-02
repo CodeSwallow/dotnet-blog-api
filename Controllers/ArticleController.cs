@@ -6,9 +6,11 @@ namespace DotNetAPI.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class ArticleController
+public class ArticleController : ControllerBase
 {
-    public ArticleController() { }
+    public ArticleController()
+    {
+    }
     
     [HttpGet]
     public ActionResult<List<Article>> GetAll() => ArticleService.GetAll();
