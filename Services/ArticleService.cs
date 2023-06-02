@@ -2,14 +2,17 @@
 
 namespace DotNetAPI.Services;
 
-public class ArticleService
+public static class ArticleService
 {
-    private static List<Article> Articles { get; }
-    private static int _nextId = 0;
+    static List<Article> Articles { get; }
+    static int _nextId = 0;
 
     static ArticleService()
     {
-        Articles = new List<Article> { };
+        Articles = new List<Article>
+        {
+            new Article { Id = _nextId++, Title = "First Article", Content = "This is the content of my first article.", Author = "John Doe", UpdatedAt = "2023-06-01T06:08:44.546Z", CreatedAt = "2023-06-01T06:08:44.546Z"},
+        };
     }
     
     public static List<Article> GetAll() => Articles;
